@@ -1,0 +1,131 @@
+.container{
+    
+    padding: 70px  ;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: lightgray;
+    font-family: "Roboto", sans-serif;
+  }
+
+body{
+    padding: 3%;
+  background-color: lightgray;
+  min-height: 90vh;
+  border-radius: 12px;
+  margin: 2%;
+}
+
+h1{
+    background:rgb(255, 255, 255);
+    color:white;
+    background:
+    linear-gradient(to right,#0000,#0000);
+    margin:0px 200px 10px 300px;
+    text-align: center;
+    box-shadow: 
+    0px 0px 2px rgb(145, 142, 142),
+    0px 5px 10px rgb(150, 150, 150),
+    1px 3px 2px 4px rgb(190, 0, 0);
+    border-radius: 5px;
+    background:black;
+    padding:20px;
+}
+
+.field .faculty{
+    margin:30px 200px 20px 150px;
+    display: flex;
+    background:lightgray;
+    border: none;
+    color:rgb(0, 0, 0);
+    padding:5px;
+    
+}
+.field .faculty select{
+    margin-left: 25px;
+    background-color: rgb(253, 247, 247);
+}
+.field .year{
+     margin:20px 180px 20px 150px;
+     display:flex;
+     background:lightgray;
+     border:none;
+     color:black;
+     padding:5px;
+}
+.field .year select{
+    margin-left: 44px;
+    background-color: rgb(255, 253, 253);
+}
+.field .part{
+    margin:20px 150px 20px 152px;
+    display:flex;
+    background:lightgray;
+    border:none;
+    color:black;
+    padding:5px;
+}
+.field .part select{
+    margin-left: 45px;
+    background-color: rgb(255, 253, 253);
+}
+
+.field .subjects{
+    margin:20px 153px 20px 151px;
+    display:flex;
+    background:lightgray;
+    border:none;
+    color:black;
+    padding:5px;
+}
+.field .subjects select{
+    margin-left: 14px;
+    background-color: rgb(255, 249, 249);
+}
+.field .full-marks{
+    margin:50px 20px 20px 650px;
+    display:flex;
+    background:lightgray;
+    border:none;
+    color:black; 
+}
+.field .full-marks input{
+    
+    background-color: white;
+}
+.no-outline:focus {
+outline: none;
+}
+.field .pass-marks{
+    margin:10px 20px 20px 650px;
+    display:flex;
+    background:lightgray;
+    border:none;
+    color:black;
+}
+.field .pass-marks input{
+
+    
+    background-color:white;
+}
+.no-outline:focus {
+outline: none;
+}
+.field .No_four{
+    margin: 5px 152px 3px;
+    padding:5px;
+ }
+
+ .field .No_two{
+     margin:5px 152px 3px;
+     padding:5px;
+ }
+.field .generate{
+    margin:20px 445px 20px 350px;
+    display:flex;
+    background:lightgray;
+    color:black;
+    padding:10px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question Paper</title>
+    <link rel="icon" type="image/png" href="{% static 'img/favcon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/output.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="body">
+        <div class="header">
+          <h3>HIMALAYA COLLEGE OF ENGINEERING</h3>
+          <span> Chaysal-9, Lalitpur </span>
+        </div>
+        <div class="sub__header">
+          <span>
+            Students are requested to give an answer in their own words
+          </span>
+        </div>
+        <div class="subject">
+          <span> Subject: {{sub}} </span>
+          <span> Full Marks: {{full_mark}} </span>
+          <span> Pass Marks:{{pass_mark}}</span>
+        </div>
+
+        <div class="row1">
+          <div class="row1__header">
+            <div>
+              <span> Group 'A'</span>
+            </div>
+            <div>(marks = 2)</div>
+          </div>
+          {% for q in questionShort %} 
+          <div class="row1__body">
+            <span>Qn) {{q}}</span>
+            
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="row1">
+          <div class="row1__header">
+            <div>
+              <span> Group 'B'</span>
+            </div>
+            <div>(marks = 4)</div>
+          </div>
+          {% for q in questionLong %}
+          <div class="row1__body">
+            <span>Qn) {{q}}</span>
+            
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="thankyou">
+          <span> THANK YOU ! </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

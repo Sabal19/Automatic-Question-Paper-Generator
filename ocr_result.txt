@@ -1,0 +1,29 @@
+1. Wlnt you undemand by firmware? you relate with operating system? Are there
+any among hardware, software. firmware and opcrating gystcm?
+2. W%at mak. the message passing IPC as onc among the beÄ methods of JPC
+implementation? Explain with pseudo(kode details.
+3. a mte on the fixed vuiablc partition multiprogramming
+techniqos for memory management
+4. a) WhMis paging? How dos it work?
+b) Explain the differenæs in the degree 10 which (i) FiM Come First Serve (ii) Rand
+Robin md (iii) Multi level queues, scheduling algorithms in 6vor of
+5. a system consisting of m reso•ree of the being shared by n
+Foæss<. Resources be requested and releaed by only one at a time. Show
+that tie system is dendlock free if the following two conditions hold:
+a) maximum need of each process is between 1 and m resources.
+b) The sum of all maximcan needs is less than m + n.
+6. a) What is a device What is a device driver? Ilow do they relieve
+programmer? Explain with an example of any 1/0 device.
+b) the implementation of process.
+7. is bootstrapping? Explain Lhe working principle ofa typical assembler. What are the
+(101
+(10)
+[10}
+[10)
+diffuent ræords present within object program?
+8. Compare the followings:
+a) Semaphore Vs Monitor
+b) Latency lime Vs seek time
+o) Coaley;ing Vs Compaction
+d) Real Manory Vs Vidual memory
+12.5x41
