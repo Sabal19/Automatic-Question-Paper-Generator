@@ -19,19 +19,23 @@ body{
 }
 
 h1{
-    background:rgb(255, 255, 255);
     color:white;
     background:
     linear-gradient(to right,#0000,#0000);
     margin:0px 200px 10px 300px;
     text-align: center;
+    border:1px solid green;
+    background-color: rgb(133, 131, 117);
+
+    border-radius: 5px;
+    padding:20px;
     box-shadow: 
     0px 0px 2px rgb(145, 142, 142),
-    0px 5px 10px rgb(150, 150, 150),
-    1px 3px 2px 4px rgb(190, 0, 0);
-    border-radius: 5px;
-    background:black;
-    padding:20px;
+    0px 5px 10px rgb(145, 142, 142),
+    1px 3px 2px 4px rgb(145, 142, 142);
+    border-radius: 7px;
+    background: linear-gradient(rgb(179, 146, 146),rgb(0, 255, 221));
+    padding:7px;
 }
 
 .field .faculty{
