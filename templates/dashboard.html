@@ -14,6 +14,7 @@
         <script src="{% static 'js/select.js' %}"></script>
 
     </head>
+    
 
 
 
@@ -21,13 +22,16 @@
  
         <div class="container">
         <body >
+            <div class = "container">
+                <a href="{% url 'logout' %}" ><button class = "logout">logout</button></a>
+            </div>
         
 
 
             <h1>Question Paper Generator and Moderator</h1>
 
             <section class="field" id="field">
-                <form action="{% url 'getdata' %}" method="GET">
+                <form action="{% url 'getdata' %}" method="POST">
                     {% csrf_token %}
                     <div class="full-marks">
                         <label for="full-marks">Full marks: </label>
