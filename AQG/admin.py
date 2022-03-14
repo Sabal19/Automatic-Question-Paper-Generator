@@ -1,13 +1,23 @@
 from django.contrib import admin
-from .models import Question,FilesAdmin,Osquestion
+from .models import Os,FilesAdmin,Dbms,Es
 # Register your models here.
 admin.site.register(FilesAdmin)
-@admin.register(Question)
 
-@admin.register(Osquestion)
 
-class OsquestionAdmin(admin.ModelAdmin):
+@admin.register(Os)
+
+@admin.register(Dbms)
+
+@admin.register(Es)
+
+
+class OsAdmin(admin.ModelAdmin):
     list_display = ('id','qn','mark')
 
-class QuestionAdmin(admin.ModelAdmin):
+class DbmsAdmin(admin.ModelAdmin):
     list_display = ('id','qn','mark')
+
+class EsAdmin(admin.ModelAdmin):
+    list_display = ('id','qn','mark')
+
+
