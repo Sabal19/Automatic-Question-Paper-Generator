@@ -40,7 +40,7 @@ def ocr_single(request):
             x = len(split_text)
             for i in range(0,x):
                 texts = split_text[i]
-                patern=re.compile(r'(\d{1,3}\))\s+([a-zA-Z0-9.\-,:;?\' ]+)+((\[\d\+\d)|(\[\d))')
+                patern=re.compile(r'(\d{1,3}\))\s+([a-zA-Z0-9.,:;?\'\-\|\\\s* ]+)+((\[\d\+\d)|(\[\d))')
                 matches=patern.finditer(texts)
 
                 for i in matches:
@@ -55,8 +55,8 @@ def ocr_single(request):
                         #group(1)=3#group(2)=+#group(3)=2
                         grp33=j.group(0)
                         if grp3==grp33:
-                            qn_first=re.compile('(\d{1,3}\))\s+([a-zA-Z0-9,:;\' ]+\?(\.)?)')
-                            qn_second=re.compile(r'(([a-zA-Z0-9,;:\'\ ]+)\.|\? )+(\s\[\d\+\d)')
+                            qn_first=re.compile('(\d{1,3}\))\s+([a-zA-Z0-9,:;\'\-\\\| ]+\?(\.)?)')
+                            qn_second=re.compile(r'(([a-zA-Z0-9,;:\'\\\|\-\ ]+)\.|\? )+(\s+\[\d\+\d)')
                             qn_first_match=qn_first.finditer(texts)
                             qn_second_match=qn_second.finditer(texts)
                             for i in qn_first_match:
@@ -93,19 +93,19 @@ def ocr_single(request):
                                         new_question =Os.objects.create(qn = Ques, mark = marking)
                                         new_question.save()
 
-                                    if subject=='dbms':
-                                        if Dbms.objects.filter(qn=Ques).exists():
-                                            pass
-                                        else:
-                                            new_question =Dbms.objects.create(qn = Ques, mark = marking)
-                                            new_question.save()
+                                if subject=='dbms':
+                                    if Dbms.objects.filter(qn=Ques).exists():
+                                        pass
+                                    else:
+                                        new_question =Dbms.objects.create(qn = Ques, mark = marking)
+                                        new_question.save()
 
-                                    if subject=='es':
-                                        if Es.objects.filter(qn=Ques).exists():
-                                            pass
-                                        else:
-                                            new_question =Es.objects.create(qn = Ques, mark = marking)
-                                            new_question.save()
+                                if subject=='es':
+                                    if Es.objects.filter(qn=Ques).exists():
+                                        pass
+                                    else:
+                                        new_question =Es.objects.create(qn = Ques, mark = marking)
+                                        new_question.save()
                                         
 
 
@@ -153,8 +153,6 @@ def ocr_single(request):
     
     text=extract_text(f'{filen}')
     return redirect(f'admin/AQG/{subject}')
-
-
 
 
 
