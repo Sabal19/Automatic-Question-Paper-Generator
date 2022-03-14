@@ -268,6 +268,25 @@ def getdata(request):
                             
                             
                             return render(request, "output.html",context)
+
+                        elif sub == "Embedded System":
+                            questionses = Es.objects.all()
+                            q=[i for i in questionses]
+                            passing= randoms(q,four_mark,two_mark)
+                            
+                            grpasA = passing[0]
+                            grpasB = passing[1]
+                            
+                            context = {
+                                    'questionShort': grpasA,
+                                    'questionLong': grpasB,
+                                    'full_mark': full_mark,
+                                    'pass_mark': pass_mark,
+                                    'sub': sub
+                                    }
+                            
+                            
+                            return render(request, "output.html",context)
                     
         else:
             messages.info(request,'Full marks not met!!')
