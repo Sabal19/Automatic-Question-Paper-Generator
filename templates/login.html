@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+{% load static %}
+<style>
+    h3{
+        color:red;
+    }
+</style>
+{% for message in messages %}
+<h3>{{message}}</h3>
+{% endfor %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Question Paper Generator and Moderator </title>
+
+
+
+        <link rel="icon" type="image/png" href="{% static 'img/favcon.png' %}">
+        <link rel="stylesheet"  href="{% static 'css/loginpage.css' %}">
+    </head>
+        
+    <body>
+        {% comment %} <section class='login' id='login'>
+        <div class="head">
+            <h1 class="signin"> Log In</h1>
+        </div>
+    
+            <div class="form">
+                <form method="post" action="{% url 'login' %}"> 
+                    {% csrf_token %}
+                    <input type="text" placeholder="Teacher ID" name="username" id="Teacher ID"><br>
+                   <p> <input type="password" placeholder="Password" name="password" id="Password"><br> </p>
+                   
+                   <p> <button type="submit" id="login">Login</button></p>
+                </form>
+            </div>
+          
+        </section>
+        </body> {% endcomment %}
+
+        
+        <div class="container">
+            <div class="screen">
+                <div class="screen__content">
+                    <form method="POST" action="{% url 'login' %}" class="login">
+                        {% csrf_token %}
+                        <div class="login__field">
+                          
+                            <input type="text" class="login__input" placeholder="Teacher ID" name="username">
+                        </div>
+                        <div class="login__field">
+                           
+                            <input type="password" class="login__input" placeholder="Password" name="password">
+                        </div>
+                        <button class="button login__submit" >
+                            <span class="button__text" >Log In</span>
+                           
+                        </button>				
+                    </form>
+                  
+                </div>
+                <div class="screen__background">
+                    <span class="screen__background__shape screen__background__shape4"></span>
+                    <span class="screen__background__shape screen__background__shape3"></span>		
+                    <span class="screen__background__shape screen__background__shape2"></span>
+                    <span class="screen__background__shape screen__background__shape1"></span>
+                </div>		
+            </div>
+        </div>
+    </body>
+
+
+        
+</html>

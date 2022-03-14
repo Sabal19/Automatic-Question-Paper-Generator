@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+   
+    <head>
+        <meta charset="utf-8" />
+        <title>Paper Generator and Moderator</title>
+        <meta name="viewport" content="" width=device-width,initial-scale=1>
+        <link rel="icon" type="image/png" href="{% static 'img/favcon.png' %}">
+         <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+        <script src="{% static 'js/select.js' %}"></script>
+
+    </head>
+    <div>
+        <style>
+            h2{
+                color:red;
+            }
+        </style>
+        {% for message in messages %}
+        <h2>{{message}}</h2>
+        {% endfor %}
+
+    </div>
+        
+        <body >
+            <section class="field" id="field">
+               
+               
+            <div class = "container">
+                <div class = "h1">
+
+            <h1>Question Paper Generator and Moderator</h1>
+            </div>
+            
+                <form action="{% url 'getdata' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="full-marks">
+                        <label for="full-marks">Full marks: </label>
+                        <input type="number" name="f_marks" class="no-outline" id="marks">
+                        </div>
+                        
+                        <div class="pass-marks">
+                        <label for="pass-marks">Pass marks: </label>
+                        <input type="p_marks" name="p_marks" class="no-outline" id="p_marks">
+                    </div>
+                    <div class="No_four">
+                        <label for="No_four">4 Marks:  </label>
+                        <input type="number" name="No_four" class="no-outline" id="number">
+                        </div>
+                        
+                        <div class="No_two">
+                        <label for="No_two">2 Marks: </label>
+                        <input type="number" name="No_two" class="no-outline" id="number">
+                    </div>
+                  
+                    <div class="faculty">
+                        <label for="faculty">Faculty : </label>
+                        <select name="faculty" id="faculty">
+                            <option value="">Select Faculty</option>
+                        </select>
+                    </div>
+
+                    <div class="year">
+                        <label for="year">Year : </label>
+                        <select name="year" id="year">
+                            <option value="">Year</option>
+                        </select>
+                    </div>
+
+                    <div class="part">
+                        <label for="part">Part : </label>
+                        <select name="part" id="part">
+                            <option value="">Part</option>
+                        </select>
+                    </div>
+
+                    <div class="subjects">
+                        <label for="subjects">Subjects : </label>
+                        <select name="subject" id="subject">
+                            <option value="">Subject</option>
+                        </select>
+                    </div>
+
+                    <div class="btn">
+                        <div class="a"><button>Proceed</button></div>
+                        
+                        
+        
+
+    </div>
+                </form>
+                <a href="{% url 'logout' %}" ><button class = "b">Logout</button></a>
+                </div>
+            </section>
+
+
+           
+        </body>
+
+</html>
