@@ -1,0 +1,202 @@
+.container{
+    
+    padding: 70px  ;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    min-height: 80vh;
+    background-color: lightgray;
+    font-family: "Roboto", sans-serif;
+    position:relative;
+  }
+
+body{
+  
+  background-color:white;
+  border-radius: 12px;
+  margin: 18%;
+  border:5PX SOLID rgb(91, 102, 91);
+  position:relative;
+
+}
+
+h1{
+    color:white;
+    height:5vh;
+    position: absolute;
+    border-radius: 5px;
+    left: 250px;
+    box-shadow: 
+    0px 0px 2px rgb(145, 142, 142),
+    0px 5px 10px rgb(145, 142, 142),
+    1px 3px 2px 4px rgb(145, 142, 142);
+    border-radius: 5px;
+    background: linear-gradient(rgb(140, 184, 187),rgb(71, 80, 79));
+  
+}
+
+.field .faculty{
+    
+    display: flex;
+    background:lightgray;
+    border: none;
+    color:rgb(0, 0, 0);
+    padding:5px;
+    position:absolute;
+    top:250px;
+    left:100px;
+    
+
+    
+}
+.field .faculty select{
+    margin-left: 25px;
+    background-color: rgb(253, 247, 247);
+    display:flex;
+}
+.field .year{
+     display:flex;
+     background:lightgray;
+     border:none;
+     color:black;
+     position:absolute;
+    top:300px;
+    left:105px;
+    
+}
+.field .year select{
+    margin-left: 44px;
+    background-color: rgb(255, 253, 253);
+    display:flex;
+}
+.field .part{
+   
+    display:flex;
+    background:lightgray;
+    border:none;
+    color:black;
+    
+    position:absolute;
+    top:350px;
+    left:105px;
+    
+}
+.field .part select{
+    margin-left: 45px;
+    background-color: rgb(255, 253, 253);
+    display:flex;
+}
+
+.field .subjects{
+   
+    display:flex;
+    background:lightgray;
+    border:none;
+    color:black;
+   
+    position:absolute;
+    top:400px;
+    left:105px;
+    
+}
+.field .subjects select{
+    margin-left: 14px;
+    background-color: rgb(255, 249, 249);
+    display:flex;
+}
+.field .full-marks{
+    position:absolute;
+    right:10px;
+    top:110px;
+    display:flex;
+    background:lightgray;
+    border:none;
+    color:black; 
+}
+.field .full-marks input{
+    
+    background-color: white;
+    display:flex;
+}
+.no-outline:focus {
+outline: none;
+display:flex;
+}
+.field .pass-marks{
+    position:absolute;
+    right:10px;
+    top:155px;
+    display:flex;
+    background:lightgray;
+    border:none;
+    color:black;
+}
+.field .pass-marks input{
+
+    
+    background-color:white;
+    display:flex;
+}
+.no-outline:focus {
+outline: none;
+display:flex;
+}
+.field .No_four{
+    position:absolute;
+    right:10px;
+    top:190px;
+    padding:5px;
+    display:flex;
+ }
+
+ .field .No_two{
+    position:absolute;
+    right:10px;
+    top:235px;
+     padding:5px;
+     display:flex;
+ }
+.field .generate{
+    
+    display:flex;
+    background:lightgray;
+    color:black;
+    padding:10px;
+    position:absolute;
+    left:50px;
+}
+.btn{
+display:flex;
+}
+.btn>.a{
+    flex:6;
+    display:flex;
+    justify-content: start;
+    border-radius: 90px;
+    margin:10px;
+    position:absolute;
+    bottom:10px;
+    left:50px;
+    
+
+}
+.b{
+    flex:6;
+    display:flex;
+    justify-content: flex-end;
+    border-radius: 90px;
+    margin:10px;
+    position:absolute;
+    bottom:10px;
+   right:50px;
+    
+
+   
+}
+@media only screen and (min-width:768px){
+    .container{
+      padding:0px;
+      
+    }
+}
